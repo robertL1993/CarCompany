@@ -37,7 +37,7 @@ namespace Repository
         public Dictionary<string,double> getFuleConsumption(int distance)
         {
             Dictionary<string, double> dict = new Dictionary<string, double>();
-            lst.ForEach(l => dict.Add(l.Model, l.HWY_MPG * distance));
+            lst.ForEach(l => dict.Add(l.Model, distance/l.HWY_MPG));
             return dict;
         }
         public Car getRandomCar()
