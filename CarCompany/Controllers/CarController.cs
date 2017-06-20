@@ -42,8 +42,8 @@ namespace CarCompany.Controllers
             return _Iservice.getBestValue();
         }
 
-        [Route("api/Car/getFuleConsumption/{distance:int}")]
-        public Dictionary<string, double> getFuleConsumption(int distance)
+        [Route("api/Car/getFuleConsumption/{distance:double}")]
+        public Dictionary<string, double> getFuleConsumption(double distance)
         {
             return _Iservice.getFuleConsumption(distance);
         }

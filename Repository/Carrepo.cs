@@ -34,10 +34,10 @@ namespace Repository
         {
             return lst.OrderByDescending(l=>l.TCC_Rating).FirstOrDefault();
         }
-        public Dictionary<string,double> getFuleConsumption(int distance)
+        public Dictionary<string,double> getFuleConsumption(double distance)
         {
             Dictionary<string, double> dict = new Dictionary<string, double>();
-            lst.ForEach(l => dict.Add(l.Model, distance/l.HWY_MPG));
+            lst.ForEach(l => dict.Add(l.Model,distance/l.HWY_MPG));
             return dict;
         }
         public Car getRandomCar()
@@ -58,7 +58,7 @@ namespace Repository
         List<Car> getalphabetizedr();
         List<Car> getOrderByPrice();
         Car getBestValue();
-        Dictionary<string, double> getFuleConsumption(int distance);
+        Dictionary<string, double> getFuleConsumption(double distance);
         Car getRandomCar();
         double averageMPGByYear(int year);
     }

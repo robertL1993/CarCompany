@@ -35,7 +35,7 @@ namespace Service
         {
             return _IcarRepo.getBestValue();
         }
-        public Dictionary<string, double> getFuleConsumption(int distance)
+        public Dictionary<string, double> getFuleConsumption(double distance)
         {
             return _IcarRepo.getFuleConsumption(distance);
         }
@@ -56,7 +56,7 @@ namespace Service
         List<Car> getOrderByPrice();
         List<Car> getalphabetizedr();
         Car getBestValue();
-        Dictionary<string, double> getFuleConsumption(int distance);
+        Dictionary<string, double> getFuleConsumption(double distance);
         Car getRandomCar();
         double averageMPGByYear(int year);
     }
